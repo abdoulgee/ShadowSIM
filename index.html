@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowSIM v4.2 - Elite SIM Exploitation Suite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+        }
+        .hacker-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .glow-text {
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+        }
+        .gradient-border {
+            border: 1px solid;
+            border-image: linear-gradient(45deg, #00ff00, #ff0000, #0000ff) 1;
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 255, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+        }
+        .matrix-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23003300' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="matrix-bg">
+    <!-- Header -->
+    <header class="bg-black bg-opacity-80 border-b border-green-500 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+               
+                <h1 class="hacker-font text-xl glow-text">SHADOW<span class="text-red-500">SIM</span></h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#features" class="hover:text-green-400 transition">Features</a>
+                <a href="#testimonials" class="hover:text-green-400 transition">Testimonials</a>
+                <a href="#specs" class="hover:text-green-400 transition">Specifications</a>
+                <a href="#faq" class="hover:text-green-400 transition">FAQ</a>
+            </div>
+            <div>
+                <a href="#order" class="bg-gradient-to-r from-green-600 to-red-600 hover:from-green-500 hover:to-red-500 text-white px-4 py-2 rounded-md transition pulse">ORDER NOW</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 relative overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <div class="inline-block px-3 py-1 bg-red-900 bg-opacity-50 text-red-300 rounded-md mb-4">
+                    <span class="text-xs">RUSSIAN DEVELOPED</span>
+                </div>
+                <h1 class="hacker-font text-4xl md:text-6xl font-bold mb-4 glow-text">ShadowSIM <span class="text-red-500">v4.2</span></h1>
+                <h2 class="text-xl md:text-2xl mb-6 text-green-300">Elite SIM Exploitation Suite</h2>
+                <p class="text-gray-300 mb-8 max-w-lg">Advanced SS7 & SIM Swap technology developed by former FSB cybersecurity experts. Military-grade exploitation tools for penetration testers and security researchers.</p>
+                
+                <div class="flex items-center mb-8">
+                    <div class="text-3xl font-bold text-green-400">$300</div>
+                    <div class="ml-4 text-lg text-gray-400 line-through">$999</div>
+                    <div class="ml-4 px-2 py-1 bg-red-800 text-xs rounded">68% OFF</div>
+                </div>
+                
+                <div class="mb-8">
+                    <div class="flex items-center text-sm text-gray-400 mb-2">
+                        <span>Limited copies available:</span>
+                        <span class="ml-2 text-red-400">12/50 remaining</span>
+                    </div>
+                    <div class="w-full bg-gray-800 rounded-full h-2">
+                        <div class="bg-gradient-to-r from-green-500 to-red-500 h-2 rounded-full" style="width: 24%"></div>
+                    </div>
+                </div>
+                
+                <a href="#order" class="inline-block bg-gradient-to-r from-green-600 to-green-800 hover:from-green-500 hover:to-green-700 text-white px-8 py-4 rounded-md text-lg font-bold transition transform hover:scale-105 pulse">
+                    BUY NOW - LIMITED TIME
+                </a>
+                
+                <div class="mt-4 text-xs text-gray-500">
+                    <i>For educational and authorized testing purposes only. Users responsible for legal compliance.</i>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-green-900 to-black rounded-lg border border-green-700 shadow-lg flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-red-500 rounded-full mx-auto mb-4"></div>
+                            <h3 class="hacker-font text-xl text-green-400 mb-2">SHADOWSIM</h3>
+                            <p class="text-xs text-gray-400">SIM Exploitation Suite v4.2</p>
+                            <div class="mt-4 flex justify-center space-x-2">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-black border border-green-700 rounded-lg p-3 shadow-lg">
+                        <div class="text-green-400 text-sm">✓ Undetectable</div>
+                        <div class="text-green-400 text-sm">✓ Zero Forensic Traces</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-black bg-opacity-50">
+        <div class="container mx-auto px-4">
+            <h2 class="hacker-font text-3xl text-center mb-12 glow-text">ADVANCED EXPLOITATION FEATURES</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="gradient-border p-6 rounded-lg bg-black bg-opacity-50 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-400 text-xl">1</span>
+                    </div>
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">Zero-Click SS7 Exploitation</h3>
+                    <p class="text-gray-300 text-sm">Bypass carrier security with advanced SS7 protocol vulnerabilities. No user interaction required.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="gradient-border p-6 rounded-lg bg-black bg-opacity-50 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-400 text-xl">2</span>
+                    </div>
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">Real-time SMS Interception</h3>
+                    <p class="text-gray-300 text-sm">Capture OTPs and authentication messages in real-time with 100% success rate.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="gradient-border p-6 rounded-lg bg-black bg-opacity-50 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-400 text-xl">3</span>
+                    </div>
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">3-Minute SIM Takeover</h3>
+                    <p class="text-gray-300 text-sm">Complete SIM porting and takeover in under 3 minutes with automated processes.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="gradient-border p-6 rounded-lg bg-black bg-opacity-50 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-400 text-xl">4</span>
+                    </div>
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">Undetectable Operation</h3>
+                    <p class="text-gray-300 text-sm">Military-grade stealth technology ensures complete anonymity and zero forensic traces.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="gradient-border p-6 rounded-lg bg-black bg-opacity-50 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-400 text-xl">5</span>
+                    </div>
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">Auto-Clean Footprints</h3>
+                    <p class="text-gray-300 text-sm">Automatically erase all digital footprints and connection logs after operation.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="gradient-border p-6 rounded-lg bg-black bg-opacity-50 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-400 text-xl">6</span>
+                    </div>
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">Global Carrier Database</h3>
+                    <p class="text-gray-300 text-sm">Access to 200+ countries carrier databases with regular updates.</p>
+                </div>
+                
+                <!-- Feature 7 -->
+                <div class="gradient-border p-6 rounded-lg bg-black bg-opacity-50 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-400 text-xl">7</span>
+                    </div>
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">24/7 Stealth Mode</h3>
+                    <p class="text-gray-300 text-sm">Continuous operation with adaptive stealth algorithms that evolve to bypass new security measures.</p>
+                </div>
+                
+                <!-- Feature 8 -->
+                <div class="gradient-border p-6 rounded-lg bg-black bg-opacity-50 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-green-400 text-xl">8</span>
+                    </div>
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">Military Encryption</h3>
+                    <p class="text-gray-300 text-sm">Russian military-grade encryption protects your activities and data from interception.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="hacker-font text-3xl text-center mb-12 glow-text">VERIFIED USER TESTIMONIALS</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-green-700 to-red-700 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white text-sm">DM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-300">Dmitri Molotov</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">"Used ShadowSIM to test our corporate security. Identified critical vulnerabilities in our 2FA system. The SS7 exploitation worked flawlessly. Highly recommended for security professionals."</p>
+                    <div class="mt-3 text-xs text-gray-500 flex justify-between">
+                        <span>Verified Purchase</span>
+                        <span>2 weeks ago</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-green-700 to-red-700 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white text-sm">AK</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-300">Alexei Kuznetsov</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">"As a penetration tester, I've tried many tools. ShadowSIM is by far the most sophisticated. The 3-minute SIM takeover feature is incredible. The Russian engineering is unmatched."</p>
+                    <div class="mt-3 text-xs text-gray-500 flex justify-between">
+                        <span>Verified Purchase</span>
+                        <span>1 month ago</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-green-700 to-red-700 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white text-sm">IR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-300">Ivan Romanov</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">"The stealth mode is truly undetectable. Used it for 3 months with zero detection. The auto-clean feature works perfectly. This is what elite security tools should be."</p>
+                    <div class="mt-3 text-xs text-gray-500 flex justify-between">
+                        <span>Verified Purchase</span>
+                        <span>3 weeks ago</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-green-700 to-red-700 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white text-sm">NS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-300">Nikolai Sokolov</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">"The global carrier database is comprehensive. Successfully tested in 15 different countries without issues. The team provides excellent support via Telegram."</p>
+                    <div class="mt-3 text-xs text-gray-500 flex justify-between">
+                        <span>Verified Purchase</span>
+                        <span>2 months ago</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-green-700 to-red-700 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white text-sm">VS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-300">Viktor Shostak</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">"Worth every bitcoin. The real-time SMS interception bypassed all major banking 2FA systems I tested. This tool is in a class of its own."</p>
+                    <div class="mt-3 text-xs text-gray-500 flex justify-between">
+                        <span>Verified Purchase</span>
+                        <span>1 week ago</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-green-700 to-red-700 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white text-sm">MP</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-300">Mikhail Petrov</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">"The military-grade encryption gives me peace of mind. Combined with the stealth features, this is the most secure exploitation suite I've ever used."</p>
+                    <div class="mt-3 text-xs text-gray-500 flex justify-between">
+                        <span>Verified Purchase</span>
+                        <span>5 days ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section id="specs" class="py-16 bg-black bg-opacity-50">
+        <div class="container mx-auto px-4">
+            <h2 class="hacker-font text-3xl text-center mb-12 glow-text">TECHNICAL SPECIFICATIONS</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="hacker-font text-xl text-green-400 mb-4">SYSTEM REQUIREMENTS</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">Windows 10/11, Linux (Kali, Ubuntu), macOS 10.15+</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">8GB RAM minimum, 16GB recommended</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">100GB free storage space</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">Stable internet connection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">Virtualization support (VT-x/AMD-V)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="hacker-font text-xl text-green-400 mb-4">COMPATIBILITY</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">All major mobile carriers (200+ countries)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">2FA systems (SMS, voice call authentication)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">SS7, Diameter, and GTP protocols</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">eSIM and physical SIM cards</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                <span class="text-gray-300">4G/5G networks</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 gradient-border p-6 rounded-lg">
+                    <h3 class="hacker-font text-xl text-green-400 mb-4">UPDATE POLICY & SUPPORT</h3>
+                    <p class="text-gray-300 mb-4">All purchases include 12 months of free updates to bypass new security measures. Our team of Russian cybersecurity experts continuously monitors global carrier security updates and releases patches within 24-48 hours of detection.</p>
+                    <p class="text-gray-300">24/7 technical support available via encrypted Telegram channel for all verified customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="hacker-font text-3xl text-center mb-12 glow-text">FREQUENTLY ASKED QUESTIONS</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">Is this tool detectable by carriers?</h3>
+                    <p class="text-gray-300">No. ShadowSIM v4.2 uses advanced evasion techniques and military-grade encryption that makes it completely undetectable by current carrier security systems. Our stealth algorithms adapt in real-time to avoid detection.</p>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">What payment methods do you accept?</h3>
+                    <p class="text-gray-300">We accept Bitcoin (BTC) only for maximum anonymity. We do not accept any traditional payment methods to protect both our and our customers' privacy.</p>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">How is the software delivered?</h3>
+                    <p class="text-gray-300">After payment confirmation, you will receive a secure download link via encrypted Telegram message within 24 hours. The package includes the software, documentation, and installation guide.</p>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">Is there a refund policy?</h3>
+                    <p class="text-gray-300">Due to the nature of our product, we do not offer refunds. However, we provide comprehensive documentation and 24/7 support to ensure you can successfully use the software.</p>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">Can this be used for educational purposes?</h3>
+                    <p class="text-gray-300">Yes, ShadowSIM is ideal for security researchers, penetration testers, and educational institutions to test and improve security systems. Users are responsible for complying with all applicable laws.</p>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="bg-black bg-opacity-50 border border-green-800 rounded-lg p-6">
+                    <h3 class="hacker-font text-lg text-green-400 mb-2">How often is the software updated?</h3>
+                    <p class="text-gray-300">We release updates as needed to bypass new security measures, typically within 24-48 hours of new carrier security patches. All customers receive 12 months of free updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-16 bg-gradient-to-b from-black to-green-900 bg-opacity-90">
+        <div class="container mx-auto px-4">
+            <h2 class="hacker-font text-3xl text-center mb-4 glow-text">ORDER SHADOWSIM v4.2</h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Join elite security professionals and researchers worldwide. Limited copies available at this price.</p>
+            
+            <div class="max-w-4xl mx-auto bg-black bg-opacity-70 border border-green-700 rounded-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="hacker-font text-xl text-green-400 mb-6">ORDER PROCESS</h3>
+                        <ol class="space-y-4 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="bg-green-900 text-green-400 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                                <span>Contact us via Telegram: <a href="https://t.me/ShadowSIM_support" class="text-green-400 hover:underline">@ShadowSIM_support</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-green-900 text-green-400 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                                <span>Provide your secure email for delivery</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-green-900 text-green-400 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                                <span>Receive Bitcoin payment address</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-green-900 text-green-400 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                                <span>Complete payment ($300 USD equivalent)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-green-900 text-green-400 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">5</span>
+                                <span>Receive software within 24 hours</span>
+                            </li>
+                        </ol>
+                        
+                        <div class="mt-8 p-4 bg-green-900 bg-opacity-30 rounded-lg">
+                            <h4 class="hacker-font text-green-400 mb-2">URGENT NOTICE</h4>
+                            <p class="text-sm text-gray-300">Price increases to $500 after current batch sells out. New carrier security patches may block older versions soon. Update protection included.</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="hacker-font text-xl text-green-400 mb-6">CONTACT & SUPPORT</h3>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center p-3 bg-black bg-opacity-50 rounded-lg border border-green-800">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white font-bold">T</span>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">Primary Contact</p>
+                                    <a href="https://t.me/ShadowSIM_support" class="text-green-400 hover:underline">@ShadowSIM_support</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-3 bg-black bg-opacity-50 rounded-lg border border-green-800">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-white font-bold">P</span>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">Alternative Contact</p>
+                                    <p class="text-green-400">ShadowSIM_support@protonmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-red-900 bg-opacity-30 border border-red-700 rounded-lg p-4">
+                            <h4 class="hacker-font text-red-400 mb-2">SECURITY NOTICE</h4>
+                            <p class="text-sm text-gray-300">Only communicate via our verified channels. We will never contact you first. Beware of imposters.</p>
+                        </div>
+                        
+                        <div class="mt-6 text-center">
+                            <a href="https://t.me/ShadowSIM_support" class="inline-block bg-gradient-to-r from-green-600 to-green-800 hover:from-green-500 hover:to-green-700 text-white px-6 py-3 rounded-md transition transform hover:scale-105">
+                                CONTACT ON TELEGRAM
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center text-xs text-gray-500 max-w-2xl mx-auto">
+                <p>DISCLAIMER: ShadowSIM SIM Exploitation Suite is intended for educational purposes, security research, and authorized penetration testing only. Users are solely responsible for complying with all applicable laws and regulations. The developers assume no liability for misuse of this software. Test only in controlled environments with proper authorization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-black border-t border-green-800">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center mb-4">
+                <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-red-500 rounded-full mr-3"></div>
+                <h3 class="hacker-font text-lg glow-text">SHADOW<span class="text-red-500">SIM</span></h3>
+            </div>
+            <p class="text-gray-500 text-sm">Russian Cybersecurity Technology © 2023</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Update the countdown timer
+        function updateCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            if (countdownElement) {
+                const now = new Date();
+                const endOfDay = new Date();
+                endOfDay.setHours(23, 59, 59, 999);
+                
+                const diff = endOfDay - now;
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                
+                countdownElement.textContent = `${hours}h ${minutes}m`;
+            }
+        }
+        
+        // Update countdown every minute
+        setInterval(updateCountdown, 60000);
+        updateCountdown(); // Initial call
+    </script>
+</body>
+</html>
